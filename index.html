@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="icon" href="./Img/paper-emoji.png">
+  </head>
+  <body>
+    <header><h1>Rock Paper Scissors</h1></header>
+    <main>
+      <div class="main__picks">
+        <button class="rock-btn picks-btn">
+          <img src="/Img/rock-emoji.png" alt="Rock" class="picks-img" />
+        </button>
+        <button class="paper-btn picks-btn">
+          <img src="/Img/paper-emoji.png" alt="Paper" class="picks-img" />
+        </button>
+        <button class="scissors-btn picks-btn">
+          <img src="/Img/scissors-emoji.png" alt="Scissors" class="picks-img" />
+        </button>
+      </div>
+      <div class="main__resault">
+        <p class="resault"></p>
+        <p class="score"></p>
+        <p class="moves">Click on one the options above</p>
+      </div>
+      <div>
+        <div class="playGameBtn">
+          <button class="reset-btn">
+            <span class="noWrap">Reset Score</span>
+          </button>
+          <button class="auto-play-btn" onclick="autoPlay()">
+            <span class="noWrap">Auto Play</span>
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h3 class="footer__h3">
+        Made With &#10084; By
+        <a href="https://github.com/AmirrezaAPTech">AmirrezaAP</a>
+      </h3>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>

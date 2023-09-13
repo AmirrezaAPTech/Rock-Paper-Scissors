@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito&display=swap");
+
+/* ||RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ||VARIABLES */
+
+:root {
+  --HEADER-FF: "Archivo Black", sans-serif;
+  --MAIN-FF: "Nunito", sans-serif;
+  --HEADER-BGCOLOR: #6ccff6;
+  --BODY-BGCOLOR: #cdedf6;
+  --HEADER-COLOR: #001011;
+  --BTN-BGCOLOR: #166088;
+  --BTN-COLOR: #1a1423;
+  --FOOTER-BGCOLOR: #6ccff6;
+  --FOOTER-COLOR: #001011;
+}
+
+/* ||GENERAL STYLES */
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--BODY-BGCOLOR);
+  min-height: 100%;
+  position: relative;
+}
+
+.noWrap {
+  white-space: nowrap;
+}
+
+/* HEADER */
+
+h1 {
+  font-family: var(--HEADER-FF);
+  text-align: center;
+  font-size: clamp(1.8em, 2vw, 2.8em);
+  padding: 0.7rem;
+}
+
+header {
+  background-color: var(--HEADER-BGCOLOR);
+  color: var(--HEADER-COLOR);
+}
+
+/* ||MAIN */
+main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+}
+
+.main__picks {
+  display: flex;
+  width: 85%;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.picks-btn {
+  border-radius: 15px;
+  border: none;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: transparent;
+}
+
+.picks-btn:hover {
+  transform: scale(1.1);
+}
+
+.picks-img {
+  max-width: 100%;
+}
+
+.playGameBtn {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 1rem;
+}
+
+.playGameBtn button {
+  font-size: 1.5rem;
+  padding: 4px 8px;
+  background-color: var(--BTN-BGCOLOR);
+  color: var(--BTN-COLOR);
+  border: none;
+  border-radius: 3px;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+
+.main__resault {
+  margin: 4rem 0 2rem 0;
+  display: grid;
+  grid-template-columns: 20% 55%;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-evenly;
+  font-family: var(--MAIN-FF);
+  font-weight: 600;
+  row-gap: 2rem;
+  text-align: center;
+  /* border: black solid 1px; */
+}
+
+.main__resault img {
+  width: 15%;
+}
+
+.moves {
+  grid-column: 1 / span 2;
+  text-align: center;
+}
+
+/* ||FOOTER */
+
+footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.footer__h3 {
+  text-align: center;
+  background-color: var(--FOOTER-BGCOLOR);
+  color: var(--FOOTER-COLOR);
+  font-family: var(--MAIN-FF);
+  padding: 0.4rem;
+}
+
+.footer__h3 a {
+  color: var(--HEADER-COLOR);
+}
+/* || MEDIUM */
+@media screen and (min-width: 768px) {
+  .main__resault {
+    grid-template-columns: 40% 55%;
+    justify-content: space-between;
+  }
+}
+/* || LARGE */
+@media screen and (min-width: 992px) {
+  .picks-img {
+    max-width: 85%;
+  }
+
+  .main__picks {
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-evenly;
+  }
+}
+
+/* || XL */
+@media screen and (min-width: 1200px) {
+  .picks-img {
+    max-width: 85%;
+  }
+}
